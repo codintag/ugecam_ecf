@@ -4,7 +4,7 @@ import { Card, CardGroup } from 'react-bootstrap'
 function Cardgroup() {
     return (
         <div>
-        <h1 className="mt-4 font-weight-bold shadow-sm p-3 mb-5 bg-white rounded">All informations about us</h1>
+        <h1 className="mt-4 font-weight-bold shadow-sm p-3 mb-5 bg-white rounded">All informations</h1>
         <CardGroup className="mt-5" >
 
             <Card>
