@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios';
 
 class Inscription extends Component {
     constructor(props){
@@ -33,7 +34,14 @@ class Inscription extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-
+        axios.post('http://localhost:5000/register', {
+            userName: this.state.userName,
+            email: this.state.email,
+            password: this.state.password,
+            passwordAgain: this.state.passwordAgain,
+        }).then(() => {
+            console.log('utilisateur ajouté')
+        }).catch( (error) => console.log(error) ) 
     }
 
 

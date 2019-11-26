@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Admin - Ugecam</title>
+</head>
+<body>
+    <div>
+        <h1 class="text-center my-5 shadow-sm p-3 mb-5 bg-white rounded">Liste des messages  </h1>
+        
+        
+                <% datas.forEach(function(item){ %>
+                    <div class="container">
+                    <ul style="list-style: none; background-color: rgb(230, 227, 227);">    
+                        <li class=" list-style-none">Nom : <b><%= item.nomPrenom %> </b></li>
+                        <li>E-mail : <b><%= item.email %> </b></li>  
+                        <li>Sujet : <b><%= item.subject %></b> </li>  
+                        <li>tél : <b><%= item.phone %></b> </li>  
+                        <li style="padding: 15px 0;"> Message : <b><%= item.messages %></b> </li>
+                       
+                    </ul>     
+                    <hr style="color:black; width: 80%;">       
+                    </div>
+           
+                <% }) %>
+       
+
+    </div>
+</body>
+</html>

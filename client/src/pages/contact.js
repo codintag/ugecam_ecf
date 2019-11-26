@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 class Formualaire extends Component {
     constructor(props) {
@@ -35,6 +36,15 @@ class Formualaire extends Component {
 
     handleContactSubmit(e) {
         e.preventDefault();
+        axios.post('http://localhost:5000/messages/registerMessage', {
+            nomPrenom: this.state.nomPrenom,
+            email: this.state.email,
+            subject: this.state.subject,
+            phone: this.state.phone,
+            messages: this.state.messages,
+        }).then(() => {
+            console.log('message ajouté')
+        }).catch( (error) => console.log(error) ) 
     }
 
 
