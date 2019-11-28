@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 5000;
 
 app.use('/static', express.static(__dirname + '/static'));
 app.set('view engine', "ejs");
