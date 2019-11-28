@@ -34,6 +34,6 @@ app.use(cors());
 app.use('/', require('./routes/inscrit'));
 app.use('/messages', require('./routes/contact'));
 
-app.listen(5000, () => {
+app.listen(port, () => {
     console.log(`The server is running on port ${port} ...`);
 })
