@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 
 const port = process.env.PORT || 5000;
 
-
+app.use('/static', express.static(__dirname + '/static'));
 app.set('view engine', "ejs");
 
 app.use(express.json());
@@ -28,7 +28,7 @@ mongoose.connect(mongoUrl, {
 app.use(cors());
 
 // app.get('/admin', (req, res) => {
-//     res.render('pageinscrit');
+//     res.render('index');
 // });
 
 app.use('/', require('./routes/inscrit'));
